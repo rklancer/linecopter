@@ -3,8 +3,8 @@ var fs = require('fs'),
     Canvas = require('canvas');
 
 function main() {
-  var indir = 'line-challenge',
-      outdir = 'extracted',
+  var indir = process.argv[2] || 'line-challenge',
+      outdir = process.argv[3] || 'extracted',
       images;
 
   images = fs.readdirSync(indir);
