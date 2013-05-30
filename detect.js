@@ -26,7 +26,7 @@ function main() {
 }
 
 function findLines(im) {
-  im.canny(10, 300);
+  im.canny(5, 50);
   // Hough threshold appear to be hard-coded in node-opencv implementation
   return im.houghLinesP();
 }
