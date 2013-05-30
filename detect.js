@@ -2,7 +2,7 @@ var fs = require('fs'),
     cv = require('opencv'),
     Canvas = require('canvas');
 
-function convert() {
+function main() {
   var indir = 'line-challenge',
       outdir = 'extracted',
       images;
@@ -26,7 +26,6 @@ function convert() {
 }
 
 function findLines(im) {
-
   im.canny(10, 300);
   // Hough threshold appear to be hard-coded in node-opencv implementation
   return im.houghLinesP();
@@ -65,5 +64,5 @@ function saveImage(ctx, name) {
   });
 }
 
-convert();
+main();
 
